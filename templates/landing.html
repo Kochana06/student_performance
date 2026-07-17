@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Performance Predictor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="landing-page">
+
+<nav class="navbar">
+    <div class="nav-brand">
+        <span class="nav-icon">🎓</span>Student Performace Predictor 
+    </div>
+    <a href="{{ url_for('login') }}" class="nav-login-btn">Login</a>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <span class="hero-tag"> Academic Insights</span>
+        <h1>Predict Student <span class="highlight">Performance</span> with Confidence</h1>
+        <p class="hero-text">
+            Our intelligent prediction system analyzes CGPA and attendance patterns
+            to forecast student outcomes — helping educators and institutions
+            identify at-risk students early and take timely action.
+        </p>
+        <a href="{{ url_for('login') }}" class="hero-btn">
+            Get Started <span>→</span>
+        </a>
+    </div>
+    <div class="hero-visual">
+        <div class="floating-card card1">📊 <span>100% Accuracy</span></div>
+        <div class="floating-card card2">✅ <span>Instant Results</span></div>
+        <div class="floating-card card3">🎯 <span>Data Driven</span></div>
+        <div class="hero-circle"></div>
+    </div>
+</section>
+
+<section class="features">
+    <h2>Why Use Student Performace Predictor ?</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Instant Predictions</h3>
+            <p>Get pass/fail predictions in seconds using trained machine learning models.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Data-Driven Accuracy</h3>
+            <p>Predictions based on real academic patterns — CGPA and attendance trends.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Secure Access</h3>
+            <p>Protected login ensures only authorized staff can access predictions.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🖥️</div>
+            <h3>Simple Interface</h3>
+            <p>Clean, easy-to-use dashboard designed for quick and clear results.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="landing-footer">
+    <p>© 2026 Student Performace Predictor  · Built for smarter academic decisions</p>
+</footer>
+
+</body>
+</html>

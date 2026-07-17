@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #1a1a2e;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ===== Shared: Navbar ===== */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-brand {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e3a8a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-icon { font-size: 22px; }
+
+.nav-login-btn {
+    background: #1e3a8a;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.nav-login-btn:hover {
+    background: #16307a;
+    transform: translateY(-1px);
+}
+
+/* ===== Landing Page ===== */
+.landing-page {
+    background: #f5f8ff;
+    min-height: 100vh;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 90px 60px;
+    min-height: 80vh;
+    max-width: 1300px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 320px;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: #e0e9ff;
+    color: #1e3a8a;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.hero h1 .highlight {
+    color: #2563eb;
+}
+
+.hero-text {
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 480px;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #2563eb;
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.4);
+}
+
+.hero-visual {
+    flex: 1;
+    min-width: 320px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    position: absolute;
+}
+
+.floating-card {
+    position: absolute;
+    background: #fff;
+    padding: 14px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: floatY 4s ease-in-out infinite;
+}
+
+.card1 { top: 10%; left: 5%; animation-delay: 0s; }
+.card2 { bottom: 15%; left: 0%; animation-delay: 1.2s; }
+.card3 { top: 40%; right: 0%; animation-delay: 0.6s; }
+
+@keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+.features {
+    background: #fff;
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 50px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: #f5f8ff;
+    padding: 32px 24px;
+    border-radius: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.12);
+}
+
+.feature-icon {
+    font-size: 30px;
+    margin-bottom: 14px;
+}
+
+.feature-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1e3a8a;
+}
+
+.feature-card p {
+    font-size: 13.5px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.landing-footer {
+    text-align: center;
+    padding: 26px;
+    background: #1e3a8a;
+    color: #dbeafe;
+    font-size: 13px;
+}
+
+/* ===== Auth Page (Login) ===== */
+.auth-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 24px;
+}
+
+.auth-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+}
+
+.back-link {
+    display: inline-block;
+    color: rgba(255,255,255,0.85);
+    font-size: 13.5px;
+    font-weight: 500;
+    margin-bottom: 18px;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover { color: #fff; }
+
+.auth-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 36px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    animation: fadeUp 0.5s ease;
+}
+
+.error-box {
+    background: #fee2e2;
+    color: #dc2626;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+/* ===== Predictor Page ===== */
+.predictor-page {
+    min-height: 100vh;
+    background: #f5f8ff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.predictor-page .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 24px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== Decorative Background Shapes ===== */
+.bg-shapes {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, 0.08);
+}
+
+.auth-page .shape { background: rgba(255,255,255,0.08); }
+
+.shape1 { width: 300px; height: 300px; top: -100px; left: -100px; }
+.shape2 { width: 220px; height: 220px; bottom: -60px; right: -60px; }
+.shape3 { width: 150px; height: 150px; top: 45%; right: 8%; }
+
+/* ===== Shared Card Elements (Login + Predictor) ===== */
+.icon-badge {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #2563eb, #1e3a8a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 16px;
+}
+
+.card {
+    width: 100%;
+    max-width: 440px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 36px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+    animation: fadeUp 0.5s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #6b7280;
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+
+.input-group { margin-bottom: 20px; }
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.input-wrapper { position: relative; }
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    opacity: 0.6;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px 12px 40px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #111827;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.hint {
+    display: block;
+    font-size: 11px;
+    color: #9ca3af;
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 13px;
+    margin-top: 6px;
+    background: linear-gradient(135deg, #2563eb, #1e3a8a);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14.5px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+button[type="submit"]:active { transform: translateY(0); }
+
+/* Result section */
+.result {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px dashed #e5e7eb;
+    text-align: center;
+    animation: fadeUp 0.4s ease;
+}
+
+.result h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.badge.pass { background: #dcfce7; color: #16a34a; }
+.badge.fail { background: #fee2e2; color: #dc2626; }
+
+.details {
+    background: #f9fafb;
+    border-radius: 10px;
+    padding: 14px 18px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 13.5px;
+}
+
+.detail-row:not(:last-child) { border-bottom: 1px solid #eef0f2; }
+
+.detail-label { color: #6b7280; font-weight: 500; }
+.detail-value { color: #111827; font-weight: 600; }
+
+.footer-note {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 12px;
+    margin-top: 18px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .navbar { padding: 16px 24px; }
+    .hero { padding: 50px 24px; text-align: center; }
+    .hero-content { text-align: center; }
+    .hero-text { margin: 0 auto 32px; }
+    .hero h1 { font-size: 32px; }
+    .features { padding: 60px 24px; }
+    .card, .auth-card { padding: 32px 24px; }
+}
